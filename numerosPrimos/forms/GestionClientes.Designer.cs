@@ -39,6 +39,9 @@
             label3 = new Label();
             txtCredito = new TextBox();
             label4 = new Label();
+            btnEditar = new Button();
+            label5 = new Label();
+            lblld = new Label();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -136,15 +139,42 @@
             label4.TabIndex = 9;
             label4.Text = "Tarjeta de Credito";
             // 
+            // btnEditar
+            // 
+            btnEditar.Location = new Point(115, 352);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(75, 23);
+            btnEditar.TabIndex = 11;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(375, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(21, 15);
+            label5.TabIndex = 12;
+            label5.Text = "ID:";
+            // 
+            // lblld
+            // 
+            lblld.AutoSize = true;
+            lblld.Location = new Point(450, 18);
+            lblld.Name = "lblld";
+            lblld.Size = new Size(0, 15);
+            lblld.TabIndex = 13;
+            // 
             // button1
             // 
-            button1.Location = new Point(360, 299);
+            button1.Location = new Point(34, 352);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 11;
-            button1.Text = "button1";
+            button1.TabIndex = 14;
+            button1.Text = "Agregar";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             // 
             // GestionClientes
             // 
@@ -152,6 +182,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
+            Controls.Add(lblld);
+            Controls.Add(label5);
+            Controls.Add(btnEditar);
             Controls.Add(txtCredito);
             Controls.Add(label4);
             Controls.Add(txtTelefono);
@@ -164,7 +197,8 @@
             Controls.Add(label1);
             Controls.Add(ListClientes);
             Name = "GestionClientes";
-            Text = "Form2";
+            Text = "btnAgregar";
+            Load += GestionClientes_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,6 +216,9 @@
         private Label label3;
         private TextBox txtCredito;
         private Label label4;
+        private Button btnEditar;
+        private Label label5;
+        private Label lblld;
         private Button button1;
     }
 }
